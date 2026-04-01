@@ -1,24 +1,34 @@
 #include <stdio.h>
 
+// Fungsi 1: Kalkulator Diskon
+void kalkulatorDiskon() {
+    float hargaAwal, persenDiskon, hargaAkhir;
+
+    printf("\n=== Kalkulator Diskon Belanja ===\n");
+
+    printf("Masukkan harga awal barang: ");
+    scanf("%f", &hargaAwal);
+
+    printf("Masukkan persentase diskon (%%): ");
+    scanf("%f", &persenDiskon);
+
+    hargaAkhir = hargaAwal - (hargaAwal * persenDiskon / 100);
+
+    printf("Harga yang harus dibayar: Rp %.2f\n", hargaAkhir);
+}
 void fungsi2()
 {
-    int jumlahOrang;
+    int jumlahOrang; // totalTagihan, nominalPerOrang;
     float totalTagihan, nominalPerOrang;
     
-    printf("\n==== KALKULATOR SPLIT BILL ====\n");
     printf("Masukkan total tagihan makanan Anda: Rp.");
     scanf("%f", &totalTagihan);
 
-    do {
     printf("Masukkan jumlah orang: ");
     scanf("%d", &jumlahOrang);
-    }
-    while (jumlahOrang <= 0);
-    
 
     nominalPerOrang = totalTagihan / jumlahOrang;
-    printf("\n==== HASIL PERHITUNGAN ====\n");
-    printf("Tagihan sebesar : Rp.%.2f\nJumlah orang : %d orang\nNominal yang harus dibayar per orang sebesar: Rp.%.2f", totalTagihan, jumlahOrang, nominalPerOrang);
+    printf("Dengan tagihan sebesar Rp.%.2f dan jumlah orangnya sebanyak %d orang, maka nominal yang harus dibayar per orang adalah sebesar: Rp.%.2f", totalTagihan, jumlahOrang, nominalPerOrang);
 }
 
 int main () {
@@ -38,7 +48,7 @@ int main () {
         input = inputInt("Masukkan input anda (1-4): ");
         switch (input) {
         case 1:
-            
+            kalkulatorDiskon();
             break;
         case 2:
             fungsi2();
