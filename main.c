@@ -1,5 +1,35 @@
 #include <stdio.h>
+void fungsi4()
+{
+    float uangSaku, totalPengeluaran, sisa;
 
+    printf("\n==== KALKULATOR SISA UANG JAJAN HARIAN ====\n");
+
+    printf("Masukkan uang saku hari ini: Rp.");
+    scanf("%f", &uangSaku);
+
+    do {
+        printf("Masukkan total estimasi pengeluaran: Rp.");
+        scanf("%f", &totalPengeluaran);
+
+        if (totalPengeluaran < 0) {
+            printf("Pengeluaran tidak boleh negatif!\n");
+        }
+    } while (totalPengeluaran < 0);
+
+    sisa = uangSaku - totalPengeluaran;
+
+    printf("\n==== HASIL PERHITUNGAN ====\n");
+    printf("Uang saku        : Rp.%.2f\n", uangSaku);
+    printf("Total pengeluaran: Rp.%.2f\n", totalPengeluaran);
+    printf("Sisa uang        : Rp.%.2f\n", sisa);
+
+    if (sisa < 0) {
+        printf("Kamu melebihi budget hari ini!\n");
+    } else {
+        printf("Keuangan masih aman\n");
+    }
+}
 void fungsi2()
 {
     int jumlahOrang;
@@ -49,7 +79,7 @@ int main () {
             break;
 
         case 4:
-            
+            fungsi4();
             break;
 
         case 0:
