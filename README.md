@@ -48,10 +48,10 @@ Menghitung sisa uang setelah pengeluaran.
 | Langkah              | Perintah                           |
 | -------------------- | ---------------------------------- |
 | Clone Repository     | `git clone <link-repo>`            |
-| Masuk Folder         | `cd bank-sampah`                   |
-| Compile              | `gcc bank_sampah.c -o bank_sampah` |
-| Jalankan (Linux/Mac) | `./bank_sampah`                    |
-| Jalankan (Windows)   | `bank_sampah.exe`                  |
+| Masuk Folder         | `cd nama-repo`                     |
+| Compile              | `gcc main.c -o asisten_keuangan`   |
+| Jalankan (Linux/Mac) | `./asisten_keuangan`               |
+| Jalankan (Windows)   | `asisten_keuangan.exe`             |
 
 ## 📋 Struktur Program
 
