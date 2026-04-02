@@ -59,10 +59,10 @@ void kalkulatorBunga()
     printf("\n Saldo awal tabungan (Rp): Rp ");
     scanf("%f", &saldo_awal);
     
-    printf("📅 Periode bunga (bulan): ");
+    printf("Periode bunga (bulan): ");
     scanf("%d", &bulan);
     
-    printf("📈 Tingkat bunga bulanan (, contoh: 0.5): ");
+    printf("Tingkat bunga bulanan (, contoh: 0.5): ");
     scanf("%f", &bunga_persen);
     
     float bunga_total = saldo_awal * (bunga_persen / 100.0) * bulan;
