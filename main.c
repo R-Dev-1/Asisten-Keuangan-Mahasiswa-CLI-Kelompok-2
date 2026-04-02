@@ -45,6 +45,46 @@ void kalkulatorSplitBill()
     getchar();
 }
 
+// fungsi kalkulator bunga
+void kalkulatorBunga() 
+{
+    float saldo_awal, bunga_persen;
+    int bulan;
+    
+    printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+    printf("           KALCULATOR BUNGA TABUNGAN\n");
+    printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+    
+    // Input data
+    printf("\n Saldo awal tabungan (Rp): Rp ");
+    scanf("%f", &saldo_awal);
+    
+    printf("📅 Periode bunga (bulan): ");
+    scanf("%d", &bulan);
+    
+    printf("📈 Tingkat bunga bulanan (, contoh: 0.5): ");
+    scanf("%f", &bunga_persen);
+    
+    float bunga_total = saldo_awal * (bunga_persen / 100.0) * bulan;
+    float saldo_akhir = saldo_awal + bunga_total;
+    
+    printf("\n ~~~~~~~~~~~~~~~~~~~~~ HASIL  ~~~~~~~~~~~~~~~~~~~~~\n");
+    printf("Saldo Awal     : Rp %,.0f\n", saldo_awal);
+    printf("Bunga/Bulan    : %,.1f%%\n", bunga_persen);
+    printf("Periode        : %d bulan\n", bulan);
+    printf("────────────────────────────────────────────────────\n");
+    printf(" Bunga Total  : Rp %,.0f\n", bunga_total);
+    printf(" Saldo Akhir  : Rp %,.0f\n", saldo_akhir);
+    printf(" Keuntungan   : +Rp %,.0f (%.1f%%)\n", 
+           bunga_total, (bunga_total/saldo_awal)*100);
+    printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+    
+    printf("\n Tekan Enter untuk kembali ke menu utama...");
+    getchar(); 
+    getchar(); 
+}
+
+
 // Fungsi Kalkulator Sisa Uang Jajan harian
 void kalkulatorSisaUangJajanHarian()
 {
