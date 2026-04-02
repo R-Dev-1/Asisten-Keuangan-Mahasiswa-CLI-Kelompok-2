@@ -59,9 +59,9 @@ Program berjalan dengan sistem menu, di mana pengguna dapat memilih fitur yang d
 
 ## 👥 Anggota Kelompok
 
-1. Raditya Wicaksana Putra 2501195
-2. Dany Fadhilah Ahnaf 2503844
-3. Falda Falisha Aeni 2511508
-4. Arief Rahman Prasetyo 2506048
-5. Raihan Muzaqi 2506091
+1. Raditya Wicaksana Putra_2501195
+2. Dany Fadhilah Ahnaf_2503844
+3. Falda Falisha Aeni_2511508
+4. Arief Rahman Prasetyo_2506048
+5. Raihan Muzaqi_2506091
 
