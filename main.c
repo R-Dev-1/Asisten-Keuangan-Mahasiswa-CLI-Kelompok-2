@@ -1,5 +1,49 @@
 #include <stdio.h>
-void fungsi4()
+
+// Fungsi Kalkulator Diskon Belanja
+void kalkulatorDiskon() {
+    float hargaAwal, persenDiskon, hargaAkhir;
+
+    printf("\n=== Kalkulator Diskon Belanja ===\n");
+
+    printf("Masukkan harga awal barang: ");
+    scanf("%f", &hargaAwal);
+
+    printf("Masukkan persentase diskon (%%): ");
+    scanf("%f", &persenDiskon);
+
+    hargaAkhir = hargaAwal - (hargaAwal * persenDiskon / 100);
+
+    printf("Harga yang harus dibayar: Rp %.2f\n", hargaAkhir);
+    printf("\ntekan enter untuk lanjut...");
+    getchar();
+    getchar();
+}
+
+// Fungsi Kalkulator Split Bill / Patungan
+void kalkulatorSplitBill()
+{
+    int jumlahOrang;
+    float totalTagihan, nominalPerOrang;
+    
+    printf("\n==== KALKULATOR SPLIT BILL ====\n");
+    printf("Masukkan total tagihan makanan Anda: Rp.");
+    scanf("%f", &totalTagihan);
+
+    do {
+    printf("Masukkan jumlah orang: ");
+    scanf("%d", &jumlahOrang);
+    }
+    while (jumlahOrang <= 0);
+    
+
+    nominalPerOrang = totalTagihan / jumlahOrang;
+    printf("\n==== HASIL PERHITUNGAN ====\n");
+    printf("Tagihan sebesar : Rp.%.2f\nJumlah orang : %d orang\nNominal yang harus dibayar per orang sebesar: Rp.%.2f", totalTagihan, jumlahOrang, nominalPerOrang);
+}
+
+// Fungsi Kalkulator Sisa Uang Jajan harian
+void kalkulatorSisaUangJajanHarian()
 {
     float uangSaku, totalPengeluaran, sisa;
 
@@ -30,33 +74,12 @@ void fungsi4()
         printf("Keuangan masih aman\n");
     }
 }
-void fungsi2()
-{
-    int jumlahOrang;
-    float totalTagihan, nominalPerOrang;
-    
-    printf("\n==== KALKULATOR SPLIT BILL ====\n");
-    printf("Masukkan total tagihan makanan Anda: Rp.");
-    scanf("%f", &totalTagihan);
 
-    do {
-    printf("Masukkan jumlah orang: ");
-    scanf("%d", &jumlahOrang);
-    }
-    while (jumlahOrang <= 0);
-    
-
-    nominalPerOrang = totalTagihan / jumlahOrang;
-    printf("\n==== HASIL PERHITUNGAN ====\n");
-    printf("Tagihan sebesar : Rp.%.2f\nJumlah orang : %d orang\nNominal yang harus dibayar per orang sebesar: Rp.%.2f", totalTagihan, jumlahOrang, nominalPerOrang);
-}
 
 int main () {
-    fungsi2();
-
     int input;
     do {
-        printf("=========================================\n");
+        printf("\n\n\n=========================================\n");
         printf("|                MENU                   |\n");
         printf("=========================================\n");
         printf("| 1) Kalkulator Diskon Belanja          |\n");
@@ -65,13 +88,14 @@ int main () {
         printf("| 4) Kalkulator Sisa Uang Jajan harian  |\n");
         printf("| 0) Exit                               |\n");
         printf("=========================================\n");
-        input = inputInt("Masukkan input anda (1-4): ");
+        printf("Masukkan input anda (0-4): ");
+        scanf("%d", &input);
         switch (input) {
         case 1:
-            
+            kalkulatorDiskon();
             break;
         case 2:
-            fungsi2();
+            kalkulatorSplitBill();
             break;
 
         case 3:
@@ -79,16 +103,15 @@ int main () {
             break;
 
         case 4:
-            fungsi4();
+            kalkulatorSisaUangJajanHarian();
             break;
 
         case 0:
-            printf("\nProgram selesai");
+            printf("\nProgram selesai\n");
             return 0;
         
         default:
-            printf("\nInput harus 1-7\n");
-            pause();
+            printf("\nInput harus 0-4\n");
             break;
         }
 
