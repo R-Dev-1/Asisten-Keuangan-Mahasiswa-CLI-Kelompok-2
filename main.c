@@ -15,7 +15,7 @@ void kalkulatorDiskon() {
     hargaAkhir = hargaAwal - (hargaAwal * persenDiskon / 100);
 
     printf("Harga yang harus dibayar: Rp %.2f\n", hargaAkhir);
-    printf("\ntekan enter untuk lanjut...");
+    printf("\n\ntekan enter untuk lanjut...");
     getchar();
     getchar();
 }
@@ -40,6 +40,9 @@ void kalkulatorSplitBill()
     nominalPerOrang = totalTagihan / jumlahOrang;
     printf("\n==== HASIL PERHITUNGAN ====\n");
     printf("Tagihan sebesar : Rp.%.2f\nJumlah orang : %d orang\nNominal yang harus dibayar per orang sebesar: Rp.%.2f", totalTagihan, jumlahOrang, nominalPerOrang);
+    printf("\n\ntekan enter untuk lanjut...");
+    getchar();
+    getchar();
 }
 
 // Fungsi Kalkulator Sisa Uang Jajan harian
@@ -73,6 +76,9 @@ void kalkulatorSisaUangJajanHarian()
     } else {
         printf("Keuangan masih aman\n");
     }
+    printf("\ntekan enter untuk lanjut...");
+    getchar();
+    getchar();
 }
 
 
