@@ -15,7 +15,7 @@ void kalkulatorDiskon() {
     hargaAkhir = hargaAwal - (hargaAwal * persenDiskon / 100);
 
     printf("Harga yang harus dibayar: Rp %.2f\n", hargaAkhir);
-    printf("\n\ntekan enter untuk lanjut...");
+    printf("\n\nTekan Enter untuk kembali ke menu utama...");
     getchar();
     getchar();
 }
@@ -40,7 +40,7 @@ void kalkulatorSplitBill()
     nominalPerOrang = totalTagihan / jumlahOrang;
     printf("\n==== HASIL PERHITUNGAN ====\n");
     printf("Tagihan sebesar : Rp.%.2f\nJumlah orang : %d orang\nNominal yang harus dibayar per orang sebesar: Rp.%.2f", totalTagihan, jumlahOrang, nominalPerOrang);
-    printf("\n\ntekan enter untuk lanjut...");
+    printf("\n\nTekan Enter untuk kembali ke menu utama...");
     getchar();
     getchar();
 }
@@ -69,17 +69,16 @@ void kalkulatorBunga()
     float saldo_akhir = saldo_awal + bunga_total;
     
     printf("\n ~~~~~~~~~~~~~~~~~~~~~ HASIL  ~~~~~~~~~~~~~~~~~~~~~\n");
-    printf("Saldo Awal     : Rp %,.0f\n", saldo_awal);
-    printf("Bunga/Bulan    : %,.1f%%\n", bunga_persen);
+    printf("Saldo Awal     : Rp %.0f\n", saldo_awal);
+    printf("Bunga/Bulan    : %.1f%%\n", bunga_persen);
     printf("Periode        : %d bulan\n", bulan);
-    printf("────────────────────────────────────────────────────\n");
-    printf(" Bunga Total  : Rp %,.0f\n", bunga_total);
-    printf(" Saldo Akhir  : Rp %,.0f\n", saldo_akhir);
-    printf(" Keuntungan   : +Rp %,.0f (%.1f%%)\n", 
+    printf(" Bunga Total  : Rp %.0f\n", bunga_total);
+    printf(" Saldo Akhir  : Rp %.0f\n", saldo_akhir);
+    printf(" Keuntungan   : +Rp %.0f (%.1f%%)\n", 
            bunga_total, (bunga_total/saldo_awal)*100);
     printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
     
-    printf("\n Tekan Enter untuk kembali ke menu utama...");
+    printf("\n\n Tekan Enter untuk kembali ke menu utama...");
     getchar(); 
     getchar(); 
 }
@@ -116,7 +115,7 @@ void kalkulatorSisaUangJajanHarian()
     } else {
         printf("Keuangan masih aman\n");
     }
-    printf("\ntekan enter untuk lanjut...");
+    printf("\n\nTekan Enter untuk kembali ke menu utama...");
     getchar();
     getchar();
 }
@@ -145,7 +144,7 @@ int main () {
             break;
 
         case 3:
-            
+            kalkulatorBunga();
             break;
 
         case 4:
